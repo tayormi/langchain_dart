@@ -75,7 +75,7 @@ class Pinecone extends VectorStore {
   /// {@macro pinecone}
   Pinecone({
     required final String apiKey,
-    final String? host,
+    final String? baseUrl,
     required this.indexName,
     this.environment = 'gcp-starter',
     this.namespace,
@@ -84,7 +84,7 @@ class Pinecone extends VectorStore {
     final http.Client? client,
   }) : _client = PineconeClient(
           apiKey: apiKey,
-          host: host,
+          baseUrl: baseUrl,
           client: client,
         );
 
